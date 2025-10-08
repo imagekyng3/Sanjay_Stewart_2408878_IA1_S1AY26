@@ -1,4 +1,4 @@
-/* CSS Variables - Based on Figma Design */
+/* CSS Variables */
 :root {
     --primary-bg: #F6EADF;
     --section-container: #E0C9B8;
@@ -58,12 +58,22 @@ nav {
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-dark);
     background-color: var(--heading-box);
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem;
     border-radius: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 nav ul {
@@ -148,6 +158,7 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .hero-image img {
@@ -331,25 +342,6 @@ section:has(> h2:first-child) article:last-child {
     display: block;
 }
 
-.storyboard-placeholder {
-    background-color: var(--content-box);
-    padding: 2rem;
-    text-align: center;
-    border: 2px dashed var(--text-dark);
-    border-radius: 15px;
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.storyboard-placeholder p {
-    margin: 0.25rem 0;
-    color: var(--text-dark);
-}
-
 /* Table */
 table {
     width: 100%;
@@ -399,12 +391,17 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design - Mobile */
+/* Responsive Design - Mobile (min 600px) */
 @media (max-width: 950px) {
     nav {
         flex-direction: column;
         gap: 1rem;
         padding: 0 1rem;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
     }
     
     nav ul {
@@ -435,6 +432,7 @@ footer a:hover {
     .hero-image {
         width: 100%;
         max-width: 400px;
+        height: 380px;
         margin: 0 auto;
     }
     
@@ -464,12 +462,3 @@ footer a:hover {
     }
 }
 
-@media (min-width: 600px) and (max-width: 950px) {
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-    
-    section:not(#home) {
-        padding: 2.5rem;
-    }
-}
