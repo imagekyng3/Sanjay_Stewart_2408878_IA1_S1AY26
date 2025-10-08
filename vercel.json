@@ -5,6 +5,7 @@
     { "src": "Code/style.css", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "Code/index.html" }
+    { "src": "/(.*)", "dest": "Code/index.html" },
+    { "src": "/(.*)", "dest": "Code/style.css" }
   ]
 }
